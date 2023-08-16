@@ -1,0 +1,39 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-button-prev {
+  color: #fff;
+  left: 20px;
+}
+.swiper-button-next {
+  color: #fff;
+  right: 20px;
+}
+
+.swiper-agents {
+  margin-bottom: 50px;
+  .agent_card {
+    width: 100%;
+    height: 350px;
+  }
+}

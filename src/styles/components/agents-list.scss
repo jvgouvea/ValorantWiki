@@ -1,0 +1,31 @@
+@use '../variables';
+
+.agents-filter {
+  margin-bottom: 45px;
+  max-width: max-content;
+  position: relative;
+  input {
+    font-size: 18px;
+    color: variables.$primary-black;
+    width: 400px;
+    height: 60px;
+    padding: 15px 20px;
+    padding-right: 50px;
+    border-radius: 5px;
+    border: 3px solid variables.$secondary-black;
+  }
+
+  svg {
+    position: absolute;
+    right: 20px;
+    top: 25%;
+  }
+}
+
+.agents-list {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 0;
+}

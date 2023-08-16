@@ -1,0 +1,6 @@
+@use '../variables';
+
+.title {
+  font-family: variables.$secondary-font;
+  color: variables.$primary-black;
+}

@@ -1,0 +1,85 @@
+@use '../variables';
+
+.footer {
+  padding-bottom: 30px;
+  &_container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    border: 3px solid variables.$secondary-red;
+    border-radius: 20px;
+    padding: 26px 20px 32px;
+  }
+
+  &_disclaimer {
+    max-width: 40%;
+
+    &__title {
+      font-family: variables.$secondary-font;
+      color: variables.$secondary-black;
+      font-weight: 500;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  &_menu {
+    border-left: 3px solid variables.$secondary-red;
+    border-right: 3px solid variables.$secondary-red;
+    padding: 0 30px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      max-width: 200px;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+
+      a {
+        font-size: 14px;
+        color: variables.$secondary-black;
+        font-weight: 600;
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background-color: variables.$secondary-red;
+          margin-top: 2px;
+          transition: 0.3s;
+          position: absolute;
+        }
+
+        &:hover::after,
+        &.active::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &_social {
+    > p {
+      font-size: 14px;
+      font-weight: 600;
+      color: variables.$secondary-black;
+    }
+
+    ul {
+      margin-top: 16px;
+      gap: 20px;
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+//fonts
+$primary-font: 'Open Sans', sans-serif;
+$secondary-font: 'Poppins', sans-serif;
+
+.primary-font {
+  font-family: $primary-font, sans-serif;
+}
+
+.secondary-font {
+  font-family: $secondary-font, sans-serif;
+}
+
+//colors
+$primary-red: #fa4454;
+$secondary-red: #dc3d4b;
+
+$primary-black: #444444;
+$secondary-black: #333333;
+
+$white: #fafafa;
+
+.primary-red {
+  color: $primary-red;
+}
+
+.secondary-red {
+  color: $secondary-red;
+}
+
+.primary-black {
+  color: $primary-black;
+}
+
+.secondary-black {
+  color: $secondary-black;
+}
+
+.white {
+  color: $white;
+}

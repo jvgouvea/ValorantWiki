@@ -1,0 +1,25 @@
+@use '../variables';
+
+.agent_card {
+  padding: 20px;
+  width: 300px;
+  height: 400px;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, variables.$secondary-red, variables.$primary-red);
+
+  a {
+    text-decoration: none;
+  }
+
+  &__name {
+    text-align: center;
+    font-family: variables.$secondary-font;
+    font-size: 26px;
+    color: variables.$white;
+    font-weight: bold;
+  }
+}

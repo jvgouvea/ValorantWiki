@@ -1,0 +1,27 @@
+@use '../variables';
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+}
+
+.loading-spinner {
+  border: 6px solid rgba(0, 0, 0, 0.3);
+  border-top: 6px solid variables.$primary-red; /* Cor do spinner */
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  animation: spin 2s linear infinite; /* Animação de rotação */
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

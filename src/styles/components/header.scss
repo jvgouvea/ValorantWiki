@@ -1,0 +1,51 @@
+@use '../variables';
+
+.header {
+  padding: 25px 30px;
+  background-color: variables.$secondary-red;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  
+  &_container {
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+  &_menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin: 0;
+
+    li {
+      a {
+        font-size: 18px;
+        color: variables.$white;
+        font-weight: 600;
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          background-color: #fff;
+          margin-top: 2px;
+          transition: 0.3s;
+          position: absolute;
+        }
+
+        &:hover::after,
+        &.active::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
