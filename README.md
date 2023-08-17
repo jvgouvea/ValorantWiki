@@ -39,5 +39,4 @@ npm run dev
 
 # To-Do List
 
-- Finalizar a home
 - Criar as paginas restantes (Mapas, Modos de jogo, ranques)
