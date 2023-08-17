@@ -40,3 +40,4 @@ npm run dev
 ## To-Do List
 
 - Criar as paginas restantes (Mapas, Modos de jogo, ranques)
+- Deixar o projeto responsivo.

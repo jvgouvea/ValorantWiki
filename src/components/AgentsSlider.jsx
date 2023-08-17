@@ -11,7 +11,7 @@ import { ValorantApiContext } from '../context/ValorantApi';
 
 import Container from '../components/Container';
 import Title from '../components/Title';
-import UnavailableService from '../components/UnavailableService';
+import ServiceUnavailable from '../components/ServiceUnavailable';
 import AgentCard from './AgentCard';
 import ButtonSeeMore from './ButtonSeeMore';
 
@@ -20,7 +20,7 @@ const AgentsSlider = () => {
 
   return (
     <Container>
-      <Title text="AGENTES" margin="0 0 40px" tag='h2' color='primary-black'/>
+      <Title text="AGENTES" margin="0 0 40px" tag="h2" color="primary-black" />
       {agents.status === 200 ? (
         <div>
           <Swiper
@@ -43,9 +43,14 @@ const AgentsSlider = () => {
           </Swiper>
         </div>
       ) : (
-        <UnavailableService />
+        <ServiceUnavailable />
       )}
-      <ButtonSeeMore text='Ver todos os agentes' link='agentes' type='red' margin='50px 0 0'/>
+      <ButtonSeeMore
+        text="Ver todos os agentes"
+        link="agentes"
+        type="red"
+        margin="50px 0 0"
+      />
     </Container>
   );
 };

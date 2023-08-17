@@ -6,7 +6,7 @@ import { ReactComponent as SearchIcon } from '../assets/icons/search.svg';
 
 import Container from '../components/Container';
 import Title from '../components/Title';
-import UnavailableService from '../components/UnavailableService';
+import ServiceUnavailable from '../components/ServiceUnavailable';
 import AgentCard from './AgentCard';
 
 const AgentsList = () => {
@@ -19,7 +19,7 @@ const AgentsList = () => {
 
   return (
     <Container>
-      <Title text="AGENTES" margin="70px 0 30px" color='primary-black'/>
+      <Title text="AGENTES" margin="70px 0 30px" color="primary-black" />
       {agents.status === 200 ? (
         <div>
           <div className="agents-filter">
@@ -48,7 +48,7 @@ const AgentsList = () => {
           </ul>
         </div>
       ) : (
-        <UnavailableService />
+        <ServiceUnavailable />
       )}
     </Container>
   );

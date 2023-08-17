@@ -4,7 +4,7 @@ import { ValorantApiContext } from '../context/ValorantApi';
 import Container from '../components/Container';
 import Title from '../components/Title';
 import ButtonSeeMore from '../components/ButtonSeeMore';
-import UnavailableService from '../components/UnavailableService';
+import ServiceUnavailable from '../components/ServiceUnavailable';
 
 const RanksPreview = () => {
   const { competitiveTiers } = useContext(ValorantApiContext);
@@ -28,7 +28,7 @@ const RanksPreview = () => {
             </ul>
           </div>
         ) : (
-          <UnavailableService />
+          <ServiceUnavailable />
         )}
         <ButtonSeeMore
           text="Ver todos os ranques"

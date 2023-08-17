@@ -1,11 +1,11 @@
 import React from 'react';
 
-const UnavailableService = () => {
+const ServiceUnavailable = () => {
   return (
-    <p className="unavailable-service">
+    <p className="service-unavailable">
       Serviço indisponível, tente novamente em alguns instantes.
     </p>
   );
 };
 
-export default UnavailableService;
+export default ServiceUnavailable;

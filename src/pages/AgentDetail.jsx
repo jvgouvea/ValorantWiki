@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import { fetchAgentDetails } from '../Api';
 import { ValorantApiContext } from '../context/ValorantApi';
 
+import ServiceUnavailable from '../components/ServiceUnavailable';
+
 function AgentDetail() {
   const [agentDetails, setAgentDetails] = useState();
 
@@ -25,13 +27,19 @@ function AgentDetail() {
 
       fetchData();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [languageApi, uuid]);
 
   return (
     <div>
-      <h2>{agentDetails?.data?.displayName}</h2>
-      <p>UUID: {uuid}</p>
+      {agentDetails.status === 200 ? (
+        <div>
+          <h2>{agentDetails?.data?.displayName}</h2>
+          <p>UUID: {uuid}</p>
+        </div>
+      ) : (
+        <ServiceUnavailable />
+      )}
     </div>
   );
 }

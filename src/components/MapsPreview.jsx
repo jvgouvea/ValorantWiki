@@ -5,7 +5,7 @@ import { ValorantApiContext } from '../context/ValorantApi';
 import Container from '../components/Container';
 import Title from '../components/Title';
 import ButtonSeeMore from '../components/ButtonSeeMore';
-import UnavailableService from '../components/UnavailableService';
+import ServiceUnavailable from '../components/ServiceUnavailable';
 
 const MapsPreview = () => {
   const { maps } = useContext(ValorantApiContext);
@@ -29,7 +29,7 @@ const MapsPreview = () => {
           </ul>
         </div>
       ) : (
-        <UnavailableService />
+        <ServiceUnavailable />
       )}
       <ButtonSeeMore
         text="Ver todos os mapas"
