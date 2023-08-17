@@ -5,6 +5,7 @@ import { ValorantApiContext } from '../context/ValorantApi';
 import Container from '../components/Container';
 import Title from '../components/Title';
 import ButtonSeeMore from '../components/ButtonSeeMore';
+import UnavailableService from '../components/UnavailableService';
 
 const GameModesPreview = () => {
   const { gameModes } = useContext(ValorantApiContext);
@@ -17,24 +18,25 @@ const GameModesPreview = () => {
         {gameModes.status === 200 ? (
           <div className="game-modes-preview_content">
             <ul className="game-modes-preview_list">
-              {firstFourGameModes.length > 0 ? (
-                firstFourGameModes.map((map) => (
-                  <li key={map.uuid}>
-                    <Link to={`/modos-de-jogo/${map.uuid}`}>
-                      <img src={map.displayIcon} alt={map.displayName} />
-                      <h4>{map.displayName}</h4>
-                    </Link>
-                  </li>
-                ))
-              ) : (
-                <p>Nenhum mapa encontrado</p>
-              )}
+              {firstFourGameModes.map((mode) => (
+                <li key={mode.uuid}>
+                  <Link to={`modos-de-jogo/${mode.uuid}`}>
+                    <img src={mode.displayIcon} alt={mode.displayName} />
+                    <h4>{mode.displayName}</h4>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         ) : (
-          <p className="unavailable-service">Serviço indisponível</p>
+          <UnavailableService />
         )}
-      <ButtonSeeMore text='Ver todos os modos' link='modos-de-jogo' type='white' margin='50px 0 0'/>
+        <ButtonSeeMore
+          text="Ver todos os modos"
+          link="modos-de-jogo"
+          type="white"
+          margin="50px 0 0"
+        />
       </Container>
     </div>
   );

@@ -1,0 +1,17 @@
+@use '../variables';
+
+.maps-preview_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maps-preview_list {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+
+  img {
+    border-radius: 5px;
+  }
+}

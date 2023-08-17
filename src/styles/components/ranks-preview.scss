@@ -1,0 +1,35 @@
+@use '../variables';
+
+.ranks-preview_container {
+  margin: 100px 0 0;
+  background-color: variables.$secondary-red;
+  padding: 40px 0 60px;
+}
+
+.ranks-preview_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 50px;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid variables.$white;
+    border-radius: 10px;
+    padding: 25px;
+
+    img {
+      max-width: 200px;
+      margin: 0 auto 10px;
+    }
+
+    h4 {
+      font-size: 36px;
+      font-weight: 600;
+      text-align: center;
+      color: variables.$white;
+    }
+  }
+}

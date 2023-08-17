@@ -3,6 +3,8 @@ import React from 'react';
 import Banner from '../components/Banner';
 import AgentsSlider from '../components/AgentsSlider';
 import GameModesPreview from '../components/GameModesPreview';
+import MapsPreview from '../components/MapsPreview';
+import RanksPreview from '../components/RanksPreview';
 
 const Home = () => {
   return (
@@ -16,6 +18,8 @@ const Home = () => {
       />
       <AgentsSlider />
       <GameModesPreview />
+      <MapsPreview />
+      <RanksPreview />
     </>
   );
 };

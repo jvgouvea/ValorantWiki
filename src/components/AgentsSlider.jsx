@@ -11,6 +11,7 @@ import { ValorantApiContext } from '../context/ValorantApi';
 
 import Container from '../components/Container';
 import Title from '../components/Title';
+import UnavailableService from '../components/UnavailableService';
 import AgentCard from './AgentCard';
 import ButtonSeeMore from './ButtonSeeMore';
 
@@ -42,7 +43,7 @@ const AgentsSlider = () => {
           </Swiper>
         </div>
       ) : (
-        <p className="unavailable-service">Serviço indisponível</p>
+        <UnavailableService />
       )}
       <ButtonSeeMore text='Ver todos os agentes' link='agentes' type='red' margin='50px 0 0'/>
     </Container>

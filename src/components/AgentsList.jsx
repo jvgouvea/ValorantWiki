@@ -6,6 +6,7 @@ import { ReactComponent as SearchIcon } from '../assets/icons/search.svg';
 
 import Container from '../components/Container';
 import Title from '../components/Title';
+import UnavailableService from '../components/UnavailableService';
 import AgentCard from './AgentCard';
 
 const AgentsList = () => {
@@ -47,7 +48,7 @@ const AgentsList = () => {
           </ul>
         </div>
       ) : (
-        <p className="unavailable-service">Serviço indisponível</p>
+        <UnavailableService />
       )}
     </Container>
   );
