@@ -14,7 +14,7 @@ const RanksPreview = () => {
     <div className="ranks-preview_container">
       <Container>
         <Title text="RANQUES" margin="0 0 40px" tag="h2" color="white" />
-        {competitiveTiers.status === 200 ? (
+        {competitiveTiers?.status === 200 ? (
           <div className="ranks-preview_content">
             <ul className="ranks-preview_list">
               {lastItem[0].tiers

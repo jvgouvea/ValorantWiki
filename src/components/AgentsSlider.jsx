@@ -21,7 +21,7 @@ const AgentsSlider = () => {
   return (
     <Container>
       <Title text="AGENTES" margin="0 0 40px" tag="h2" color="primary-black" />
-      {agents.status === 200 ? (
+      {agents?.status === 200 ? (
         <div>
           <Swiper
             slidesPerView={5}

@@ -11,12 +11,10 @@ const MapsPreview = () => {
   const { maps } = useContext(ValorantApiContext);
   const firstFourMaps = maps.data.slice(0, 4);
 
-  console.log(firstFourMaps.data);
-
   return (
     <Container>
       <Title text="MAPAS" margin="0 0 40px" tag="h2" color="primary-black" />
-      {maps.status === 200 ? (
+      {maps?.status === 200 ? (
         <div className="maps-preview_content">
           <ul className="maps-preview_list">
             {firstFourMaps.map((map) => (

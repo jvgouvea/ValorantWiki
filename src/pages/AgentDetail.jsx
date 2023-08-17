@@ -30,9 +30,11 @@ function AgentDetail() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [languageApi, uuid]);
 
+  console.log(agentDetails);
+
   return (
     <div>
-      {agentDetails.status === 200 ? (
+      {agentDetails?.status === 200 ? (
         <div>
           <h2>{agentDetails?.data?.displayName}</h2>
           <p>UUID: {uuid}</p>

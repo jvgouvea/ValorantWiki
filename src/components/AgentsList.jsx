@@ -20,7 +20,7 @@ const AgentsList = () => {
   return (
     <Container>
       <Title text="AGENTES" margin="70px 0 30px" color="primary-black" />
-      {agents.status === 200 ? (
+      {agents?.status === 200 ? (
         <div>
           <div className="agents-filter">
             <input

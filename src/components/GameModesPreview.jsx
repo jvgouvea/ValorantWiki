@@ -15,7 +15,7 @@ const GameModesPreview = () => {
     <div className="game-modes-preview_container">
       <Container>
         <Title text="MODOS DE JOGO" margin="0 0 40px" tag="h2" color="white" />
-        {gameModes.status === 200 ? (
+        {gameModes?.status === 200 ? (
           <div className="game-modes-preview_content">
             <ul className="game-modes-preview_list">
               {firstFourGameModes.map((mode) => (
