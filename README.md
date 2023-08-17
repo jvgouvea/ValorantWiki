@@ -37,6 +37,6 @@ npm install
 npm run dev
 ```
 
-# To-Do List
+## To-Do List
 
 - Criar as paginas restantes (Mapas, Modos de jogo, ranques)
