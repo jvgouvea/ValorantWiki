@@ -2,10 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const ButtonLink = ({ text, link, type, alignment }) => {
+const ButtonSeeMore = ({ text, link, type, margin }) => {
   const styleMap = {
     red: 'red',
     white: 'white',
+  };
+
+  const linkStyle = {
+    margin: margin,
   };
 
   const getButtonClasses = () => {
@@ -20,17 +24,18 @@ const ButtonLink = ({ text, link, type, alignment }) => {
 
   return (
     <div className='button-see-moore_container'>
-      <button className={getButtonClasses()}>
-        <Link to={link}>{text}</Link>
+      <button>
+        <Link style={linkStyle} className={getButtonClasses()} to={link}>{text}</Link>
       </button>
     </div>
   );
 };
 
-ButtonLink.propTypes = {
+ButtonSeeMore.propTypes = {
   text: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['red', 'white']).isRequired,
+  margin: PropTypes.string
 };
 
-export default ButtonLink;
+export default ButtonSeeMore;

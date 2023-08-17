@@ -1,0 +1,41 @@
+@use '../variables';
+
+.banner {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  border: 2px solid variables.$primary-red;
+  border-radius: 20px;
+  padding: 30px 60px;
+  margin: 70px 0;
+
+  &_content {
+    &__title {
+      font-size: 64px;
+      font-weight: bold;
+      color: variables.$secondary-black;
+      margin-bottom: 30px;
+      line-height: 80px;
+    }
+    &__paragraph {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 50px;
+      max-width: 80%;
+    }
+
+    &__button {
+      width: 400px;
+      height: 60px;
+      font-size: 18px;
+      font-weight: bold;
+      color: variables.$white;
+      background-color: variables.$primary-red;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

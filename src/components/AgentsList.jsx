@@ -3,6 +3,9 @@ import React, { useState, useContext } from 'react';
 import { ValorantApiContext } from '../context/ValorantApi';
 
 import { ReactComponent as SearchIcon } from '../assets/icons/search.svg';
+
+import Container from '../components/Container';
+import Title from '../components/Title';
 import AgentCard from './AgentCard';
 
 const AgentsList = () => {
@@ -14,7 +17,8 @@ const AgentsList = () => {
   );
 
   return (
-    <>
+    <Container>
+      <Title text="AGENTES" margin="70px 0 30px" color='primary-black'/>
       {agents.status === 200 ? (
         <div>
           <div className="agents-filter">
@@ -45,7 +49,7 @@ const AgentsList = () => {
       ) : (
         <p className="unavailable-service">Serviço indisponível</p>
       )}
-    </>
+    </Container>
   );
 };
 

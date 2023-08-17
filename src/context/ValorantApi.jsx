@@ -2,7 +2,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import {
   fetchAgents,
-  fetchAgentDetails,
   fetchMaps,
   fetchCompetitiveTiers,
   fetchGameModes,
@@ -15,7 +14,6 @@ const ValorantApiProvider = ({ children }) => {
   const [languageApi, setLanguageApi] = useState('pt-BR'); // idioma na API
   const [uuid, setUuid] = useState(); // ID do agente ativo
   const [agents, setAgents] = useState();
-  const [agentDetails, setAgentDetails] = useState();
   const [maps, setMaps] = useState([]);
   const [competitiveTiers, setCompetitiveTiers] = useState([]);
   const [gameModes, setGameModes] = useState([]);
@@ -42,23 +40,6 @@ const ValorantApiProvider = ({ children }) => {
     fetchData();
   }, [languageApi]);
 
-  useEffect(() => {
-    if (uuid) {
-      const fetchData = async () => {
-        try {
-          const agentDetailsData = await fetchAgentDetails(uuid, languageApi);
-
-          setAgentDetails(agentDetailsData);
-          setLoading(false);
-        } catch (error) {
-          console.log(error);
-        }
-      };
-
-      fetchData();
-    }
-  }, [languageApi, uuid]);
-
   return (
     <ValorantApiContext.Provider
       value={{
@@ -66,10 +47,7 @@ const ValorantApiProvider = ({ children }) => {
         setLoading,
         languageApi,
         setLanguageApi,
-        uuid,
-        setUuid,
         agents,
-        agentDetails,
         maps,
         competitiveTiers,
         gameModes,

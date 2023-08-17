@@ -9,16 +9,17 @@ import 'swiper/css/pagination';
 
 import { ValorantApiContext } from '../context/ValorantApi';
 
+import Container from '../components/Container';
 import Title from '../components/Title';
 import AgentCard from './AgentCard';
-import ButtonLink from './ButtonSeeMore';
+import ButtonSeeMore from './ButtonSeeMore';
 
 const AgentsSlider = () => {
   const { agents } = useContext(ValorantApiContext);
 
   return (
-    <>
-      <Title text="Agentes" margin="0 0 40px" />
+    <Container>
+      <Title text="AGENTES" margin="0 0 40px" tag='h2' color='primary-black'/>
       {agents.status === 200 ? (
         <div>
           <Swiper
@@ -43,8 +44,8 @@ const AgentsSlider = () => {
       ) : (
         <p className="unavailable-service">Serviço indisponível</p>
       )}
-      <ButtonLink text='Ver todos os agentes' link='agentes' type='red' />
-    </>
+      <ButtonSeeMore text='Ver todos os agentes' link='agentes' type='red' margin='50px 0 0'/>
+    </Container>
   );
 };
 

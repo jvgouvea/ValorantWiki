@@ -1,5 +1,8 @@
+//general styles
 @use 'reset';
 @use 'variables';
+
+//components
 @use './components/header';
 @use './components/footer';
 @use './components/swiper';
@@ -7,8 +10,10 @@
 @use './components/loading';
 @use './components/agents-list';
 @use './components/agent-card';
+@use './components/banner';
 @use './components/title';
 @use './components/button-see-more';
+@use './components/game-modes-preview';
 
 * {
   font-family: variables.$primary-font;
@@ -16,7 +21,7 @@
 }
 
 body {
-  padding-top: 76px;
+  padding-top: 81px;
 }
 
 .unavailable-service {
