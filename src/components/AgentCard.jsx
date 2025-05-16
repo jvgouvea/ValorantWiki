@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const AgentCard = ({ uuid, displayName, fullPortrait }) => {
   return (
     <div className="agent_card">
-      <Link to={`/agente/${uuid}`}>
+      <Link to={`/agente/${displayName}/${uuid}`}>
         <p className="agent_card__name">{displayName}</p>
         <img
           className="agent_card__img"

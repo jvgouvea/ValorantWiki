@@ -4,13 +4,14 @@ import { useParams } from 'react-router-dom';
 import { fetchAgentDetails } from '../Api';
 import { ValorantApiContext } from '../context/ValorantApi';
 
+import Loading from '../components/Loading';
 import ServiceUnavailable from '../components/ServiceUnavailable';
 
 function AgentDetail() {
   const [agentDetails, setAgentDetails] = useState();
 
   const { uuid } = useParams();
-  const { languageApi, setLoading } = useContext(ValorantApiContext);
+  const { languageApi } = useContext(ValorantApiContext);
 
   useEffect(() => {
     if (uuid) {
@@ -19,7 +20,6 @@ function AgentDetail() {
           const agentDetailsData = await fetchAgentDetails(uuid, languageApi);
 
           setAgentDetails(agentDetailsData);
-          setLoading(false);
         } catch (error) {
           console.log(error);
         }
@@ -34,10 +34,11 @@ function AgentDetail() {
 
   return (
     <div>
-      {agentDetails?.status === 200 ? (
+      {agentDetails === undefined ? (
+        <Loading />
+      ) : agentDetails.status === 200 ? (
         <div>
-          <h2>{agentDetails?.data?.displayName}</h2>
-          <p>UUID: {uuid}</p>
+          <h2>{agentDetails.data?.displayName}</h2>
         </div>
       ) : (
         <ServiceUnavailable />

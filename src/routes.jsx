@@ -19,7 +19,7 @@ const Rotas = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/agentes" element={<Agents />} />
-      <Route path="/agente/:uuid" element={<AgentDetail />} />
+      <Route path="/agente/:name/:uuid" element={<AgentDetail />} />
     </Routes>
   );
 };
