@@ -1,0 +1,60 @@
+@use '../variables';
+
+.agent_content {
+    margin-top: 100px;
+    &__info {
+        display: flex;
+        &___text {
+            h2 {
+                font-size: 64px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            h3 {
+                font-size: 36px;
+                font-weight: 500;
+                margin: 30px 0 20px 0;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+    &__abilities {
+        h4 {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 40px 0 50px 0;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        li {
+            border: 3px solid variables.$secondary-red;
+            border-radius: 5px;
+            display: flex;
+            gap: 35px;
+        }
+        &___text {
+            span {
+                font-size: 24px;
+                font-weight: bold;
+                margin: 10px 0;
+            }
+            p {
+                font-size: 18px;
+                max-width: 100ch;
+            }
+        }
+        &___img {
+            background-color: variables.$secondary-red;
+            padding: 25px;
+            img {
+                max-width: 150px;
+                max-height: 150px;
+            }
+        }
+    }
+}

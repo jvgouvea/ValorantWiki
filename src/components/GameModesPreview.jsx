@@ -20,7 +20,7 @@ const GameModesPreview = () => {
             <ul className="game-modes-preview_list">
               {firstFourGameModes.map((mode) => (
                 <li key={mode.uuid}>
-                  <Link to={`modos-de-jogo/${mode.uuid}`}>
+                  <Link to={`modos-de-jogo/${mode.displayName}/${mode.uuid}`}>
                     <img src={mode.displayIcon} alt={mode.displayName} />
                     <h4>{mode.displayName}</h4>
                   </Link>
