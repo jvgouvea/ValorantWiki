@@ -60,9 +60,22 @@ const fetchAgentDetails = async (agentUuid, language) => {
     const data = await response.json();
     return data;
   } catch (error) {
+    console.error('Error fetching agent details:', error);
+    throw error;
+  }
+};
+
+const fetchGameModeDetails = async (gamemodeUuid, language) => {
+  try {
+    const response = await fetch(
+      `${baseUrl}/gamemodes/${gamemodeUuid}?language=${language}`,
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
     console.error('Error fetching game modes:', error);
     throw error;
   }
 };
 
-export { fetchAgents, fetchMaps, fetchCompetitiveTiers, fetchGameModes, fetchAgentDetails };
+export { fetchAgents, fetchMaps, fetchCompetitiveTiers, fetchGameModes, fetchAgentDetails, fetchGameModeDetails };

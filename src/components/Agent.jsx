@@ -31,8 +31,6 @@ function Agent({ uuid }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [languageApi, uuid]);
 
-  console.log(agent);
-
   return (
     <Container>
       {agent === undefined ? (

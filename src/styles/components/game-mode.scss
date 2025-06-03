@@ -1,0 +1,22 @@
+@use '../variables';
+
+.gameMode_content {
+    margin-top: 70px;
+    display: flex;
+    gap: 30px;
+    img {
+        width: 300px;
+        height: 600px;
+    }
+
+    h2 {
+        color: variables.$primary-black;
+        font-size: 64px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 18px;
+        max-width: 68ch;
+    }
+}

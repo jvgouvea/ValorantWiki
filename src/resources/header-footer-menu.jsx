@@ -17,7 +17,7 @@ export default [
   {
     id: 'GameModes',
     title: 'Modos de jogo',
-    link: 'modos',
+    link: 'modos-de-jogo',
   },
   {
     id: 'Tiers',

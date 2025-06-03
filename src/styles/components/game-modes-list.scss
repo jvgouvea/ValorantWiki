@@ -1,0 +1,33 @@
+@use '../variables';
+
+.game-modes-list_content {
+    ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+            background-color: variables.$secondary-red;
+            padding: 20px;
+            height: 350px;
+            border-radius: 4px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+            img {
+                width: 125px;
+                height: 125px;
+            }
+
+            h4 {
+                font-size: 32px;
+                color: variables.$white;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+    }
+}
