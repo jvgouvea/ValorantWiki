@@ -11,6 +11,7 @@ import GameModes from './pages/GameModes';
 import GameModeDetail from './pages/GameModeDetail';
 import Maps from './pages/Maps';
 import MapDetail from './pages/MapDetail';
+import CompetitiveTiers from './pages/CompetitiveTiers';
 
 const Rotas = () => {
   const { loading } = useContext(ValorantApiContext);
@@ -25,6 +26,7 @@ const Rotas = () => {
       <Route path="/agentes" element={<Agents />} />
       <Route path="/mapas" element={<Maps />} />
       <Route path="/modos-de-jogo" element={<GameModes />} />
+      <Route path="/Ranques" element={<CompetitiveTiers />} />
       <Route path="/agente/:name/:uuid" element={<AgentDetail />} />
       <Route path="/modos-de-jogo/:name/:uuid" element={<GameModeDetail />} />
       <Route path="/mapa/:name/:uuid" element={<MapDetail />} />

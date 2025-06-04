@@ -21,6 +21,7 @@
 @use './components/maps-preview';
 @use './components/maps-list';
 @use './components/ranks-preview';
+@use './components/competitive-tiers-list';
 
 * {
   font-family: variables.$primary-font;

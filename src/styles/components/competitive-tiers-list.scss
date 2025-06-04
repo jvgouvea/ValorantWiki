@@ -1,0 +1,30 @@
+@use '../variables';
+
+.competitiveTiers-list_content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    ul {
+        display: flex;
+        gap: 40px;
+
+        li {
+            max-width: 200px;
+            max-height: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: center;
+            border: 2px solid variables.$secondary-red;
+            border-radius: 5px;
+            padding: 10px 25px;
+
+            img {
+                height: 150px;
+                width: 150px;
+            }
+        }
+    }
+}
