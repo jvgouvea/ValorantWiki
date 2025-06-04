@@ -9,9 +9,6 @@ import ServiceUnavailable from '../components/ServiceUnavailable';
 const GameModeslist = () => {
   const { gameModes } = useContext(ValorantApiContext);
 
-  console.log(gameModes.data);
-  
-
   return (
     <div className="game-modes-list_container">
       <Container>

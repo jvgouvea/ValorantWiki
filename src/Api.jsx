@@ -78,4 +78,20 @@ const fetchGameModeDetails = async (gamemodeUuid, language) => {
   }
 };
 
-export { fetchAgents, fetchMaps, fetchCompetitiveTiers, fetchGameModes, fetchAgentDetails, fetchGameModeDetails };
+const fetchMapDetails = async (mapsUuid, language) => {
+  try {
+    const response = await fetch(
+      `${baseUrl}/maps/${mapsUuid}?language=${language}`,
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching maps:', error);
+    throw error;
+  }
+};
+
+export { 
+  fetchAgents, fetchMaps, fetchCompetitiveTiers, fetchGameModes, 
+  fetchAgentDetails, fetchGameModeDetails, fetchMapDetails 
+};

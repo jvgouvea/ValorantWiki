@@ -4,23 +4,23 @@ import React, { useEffect, useState, useContext } from 'react';
 import Container from '../components/Container';
 import PropTypes from 'prop-types';
 
-import { fetchGameModeDetails } from '../Api';
+import { fetchMapDetails } from '../Api';
 import { ValorantApiContext } from '../context/ValorantApi';
 
 import Loading from '../components/Loading';
 import ServiceUnavailable from '../components/ServiceUnavailable';
 
-function GameMode({ uuid }) {
-  const [gameMode, setGameMode] = useState();
+function Map({ uuid }) {
+  const [map, setMap] = useState();
   const { languageApi } = useContext(ValorantApiContext);
 
   useEffect(() => {
     if (uuid) {
       const fetchData = async () => {
         try {
-          const gameModeData = await fetchGameModeDetails(uuid, languageApi);
+          const mapData = await fetchMapDetails(uuid, languageApi);
 
-          setGameMode(gameModeData);
+          setMap(mapData);
         } catch (error) {
           console.log(error);
         }
@@ -33,19 +33,13 @@ function GameMode({ uuid }) {
 
   return (
     <Container>
-      {gameMode === undefined ? (
+      {map === undefined ? (
         <Loading />
-      ) : gameMode.status === 200 ? (
-        <div className="gameMode_content">
-          <div>
-            {gameMode.data?.listViewIconTall ? (
-              <img src={gameMode.data?.listViewIconTall} alt={gameMode.data?.displayName} />
-            ) : null}
-          </div>
-          <div>
-            <h2>{gameMode.data?.displayName}</h2>
-            <p>{gameMode.data?.description}</p>
-          </div>
+      ) : map.status === 200 ? (
+        <div className="map_content">
+            <h2>{map.data?.displayName}</h2>
+            <img className="map_content__splash" src={map.data?.splash} alt={map.data?.displayName} />
+            <img className="map_content__minimap" src={map.data?.displayIcon} alt={map.data?.displayName} />
         </div>
       ) : (
         <ServiceUnavailable />
@@ -54,8 +48,8 @@ function GameMode({ uuid }) {
   );
 }
 
-GameMode.propTypes = {
+Map.propTypes = {
    uuid: PropTypes.string.isRequired,
 };
 
-export default GameMode;
+export default Map;

@@ -4,22 +4,21 @@ import { ValorantApiContext } from '../context/ValorantApi';
 
 import Container from '../components/Container';
 import Title from '../components/Title';
-import ButtonSeeMore from '../components/ButtonSeeMore';
 import ServiceUnavailable from '../components/ServiceUnavailable';
 
-const MapsPreview = () => {
+const MapsList = () => {
   const { maps } = useContext(ValorantApiContext);
-  const firstFourMaps = maps.data.slice(0, 4);
 
   return (
     <Container>
-      <Title text="MAPAS" margin="0 0 40px" tag="h2" color="primary-black" />
-      {maps?.status === 200 ? (
-        <div className="maps-preview_content">
-          <ul className="maps-preview_list">
-            {firstFourMaps.map((map) => (
+      <Title text="MAPAS" margin="70px 0 40px" tag="h2" color="primary-black" />
+      {maps.status === 200 ? (
+        <div className="maps-list_content">
+          <ul>
+            {maps.data?.map((map) => (
               <li key={map.uuid}>
                 <Link to={`/mapa/${map.displayName}/${map.uuid}`}>
+                  <span>{map.displayName}</span>
                   <img src={map.splash} alt={map.displayName} />
                 </Link>
               </li>
@@ -29,14 +28,8 @@ const MapsPreview = () => {
       ) : (
         <ServiceUnavailable />
       )}
-      <ButtonSeeMore
-        text="Ver todos os mapas"
-        link="mapas"
-        type="red"
-        margin="50px 0 0"
-      />
     </Container>
   );
 };
 
-export default MapsPreview;
+export default MapsList;

@@ -1,0 +1,14 @@
+@use '../variables';
+
+.maps-list_content {
+    ul {
+        span {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}

@@ -8,6 +8,9 @@ import Home from './pages/Home';
 import Agents from './pages/Agents';
 import AgentDetail from './pages/AgentDetail';
 import GameModes from './pages/GameModes';
+import GameModeDetail from './pages/GameModeDetail';
+import Maps from './pages/Maps';
+import MapDetail from './pages/MapDetail';
 
 const Rotas = () => {
   const { loading } = useContext(ValorantApiContext);
@@ -20,8 +23,11 @@ const Rotas = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/agentes" element={<Agents />} />
-      <Route path="/agente/:name/:uuid" element={<AgentDetail />} />
+      <Route path="/mapas" element={<Maps />} />
       <Route path="/modos-de-jogo" element={<GameModes />} />
+      <Route path="/agente/:name/:uuid" element={<AgentDetail />} />
+      <Route path="/modos-de-jogo/:name/:uuid" element={<GameModeDetail />} />
+      <Route path="/mapa/:name/:uuid" element={<MapDetail />} />
     </Routes>
   );
 };
