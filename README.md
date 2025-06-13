@@ -27,7 +27,6 @@ git clone https://github.com/your-username/valorant-wiki.git
 2. Instale as dependências:
 
 ```bash
-cd valorant-wiki
 npm install
 ```
 
@@ -39,5 +38,4 @@ npm run dev
 
 ## To-Do List
 
-- Criar as paginas restantes (Mapas, Modos de jogo, ranques)
 - Deixar o projeto responsivo.
