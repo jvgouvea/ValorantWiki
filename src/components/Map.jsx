@@ -39,7 +39,7 @@ function Map({ uuid }) {
         <div className="map_content">
             <h2>{map.data?.displayName}</h2>
             <img className="map_content__splash" src={map.data?.splash} alt={map.data?.displayName} />
-            <img className="map_content__minimap" src={map.data?.displayIcon} alt={map.data?.displayName} />
+            {map.data?.displayIcon ? <img className="map_content__minimap" src={map.data?.displayIcon} alt={map.data?.displayName} /> : null}
         </div>
       ) : (
         <ServiceUnavailable />

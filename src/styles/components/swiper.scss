@@ -32,7 +32,11 @@
 
 .swiper-agents {
   .agent_card {
+    padding: 30px 30px 50px 30px;
     width: 100%;
-    height: 350px;
+    height: 100%;
+    &__img {
+      height: 300px;
+    }
   }
 }

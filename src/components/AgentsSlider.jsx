@@ -24,12 +24,23 @@ const AgentsSlider = () => {
       {agents?.status === 200 ? (
         <div>
           <Swiper
-            slidesPerView={5}
+            slidesPerView={4}
             spaceBetween={30}
             loop={true}
             navigation={true}
             modules={[Navigation]}
-            className="swiper-agents"
+            className="swiper-agents"  
+            breakpoints={{
+            480: {
+              slidesPerView: 2, //mobile
+            },
+            768: {
+              slidesPerView: 3, // mobile
+            },
+            1280: {
+              slidesPerView: 4, // desktop
+            },
+          }}
           >
             {agents.data.map((agent) => (
               <SwiperSlide key={agent.uuid}>

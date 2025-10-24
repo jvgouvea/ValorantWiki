@@ -39,3 +39,16 @@
     }
   }
 }
+
+@media (max-width: 1280px) {
+  .banner {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  margin: 70px 0;
+
+    .banner_image {
+      display: none;
+    }
+  }
+}

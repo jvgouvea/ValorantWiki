@@ -33,3 +33,16 @@
     }
   }
 }
+
+@media (max-width: 1280px) {
+  .ranks-preview_list {
+    grid-template-columns: repeat(2, 1fr);
+
+    li {
+      img {
+        max-width: 150px;
+        margin: 0 auto 10px;
+      }
+    }
+  }
+}
