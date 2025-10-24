@@ -1,5 +1,7 @@
 # Valorant Wiki
 
+![Image](https://github.com/user-attachments/assets/c4a3e12a-df1d-4e67-9703-5fe76eac76cf)
+
 O Valorant Wiki é um site dedicado a fornecer informações abrangentes sobre o jogo Valorant. Aqui, os jogadores podem encontrar detalhes sobre agentes, modos de jogo, mapas e muito mais. O projeto foi desenvolvido utilizando Vite, React, Sass e Context API para proporcionar uma experiência de usuário aprimorada.
 
 ## Funcionalidades
